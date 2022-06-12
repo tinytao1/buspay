@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>BUS PAY</title>
+  <link rel="stylesheet" href="buspayv2.css" />
+</head>
+<body>
+
+<h2 id="title">BUS PAY</h2>
+
+<form>
+<span>Pay rate:</span><br>
+
+<span><b>$</b></span><span id="rateEl"></span>
+<label for="rateEl"><b>/</b> hour</label>
+<br><br>
+
+
+<span>Time worked:</span>
+<br>
+<span id="hoursEl"></span>
+<label for="hoursEl">hours</label>
+<br>
+
+<span id="minutesEl"></span>
+<label for="minutesEl"> minutes</label>
+      <br><br>
+
+
+<input type="button"
+       id="gobtn"
+       value="Go" 
+       onClick="go()">
+       <br>
+
+<input type="button"
+       id="reetbtn" 
+       value="Reset" 
+       onClick="reeet()">
+
+<input type="button"
+       id="allovertimebtn"
+       value="All overtime"
+       onClick="allovertime()">
+</form>
+
+
+<p id="payEl">$0.00</p>
+
+<p id="">
+
+<span id="calcEl1"></span><br>
+
+<span id="calcEl2"></span><br>
+
+<span id="calcEl3"></span><br>
+
+<span id="calcEl4"></span><br>
+
+<span id="calcEl5"></span><br>
+
+<span id="calcEl6"></span><br>
+</p>
+
+
+<script type="text/javascript" src="buspayv2.js"></script>
+<script type="text/javascript" src="functionsbuspay.js"></script>
+</body>
+</html>

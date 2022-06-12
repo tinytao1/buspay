@@ -1,0 +1,21 @@
+body, input {
+  font-size:20px;
+  background-color: rgb(240, 245, 240)
+;
+  text-align: center;
+}
+
+#payEl {
+  font-size:25px;
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+#allovertimebtn {
+  display: ; /*none;*/
+}
+
+/*#calcEl1, #calcEl2, #calcEl3, #calcEl4, #calcEl5, #calcEl6 {
+  display: none;
+}
+*/
