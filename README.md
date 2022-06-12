@@ -1,3 +1,3 @@
 # buspay
-Bus pay calculator.
-My first application!
+Bus pay calculator,
+my first application!
