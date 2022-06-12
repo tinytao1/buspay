@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Bus Pay Tampa</title>
+  <link rel="stylesheet" href="buspayRefactor.css" />
+</head>
+<body>
+
+<h1 id="title"><span id="tampa">Tampa</span>
+       <br>
+       Bus Pay</h1>
+
+<form>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$18.87
+</button>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$19.94
+</button>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$21.29
+</button>
+<br>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$22.91
+</button>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$24.80
+</button>
+
+<button onclick="step1()" id="step1el" type="button" class="payratebtn">
+$26.95
+</button>
+<br>
+<br>
+
+<span>Effective: October</span>
+
+<input type="radio" name="effective" id="e2021" value="2021" checked>
+<label for="e2021">2021</label>
+<br>
+
+<input type="radio" name="effective" id="e2022" value="2022">
+<label for="e2022">2022</label>
+
+<input type="radio" name="effective" id="e2023" value="2023">
+<label for="e2023">2023</label>
+<br>
+<br>
+
+<div id="payratediv">
+
+<label id="payratetext">Pay rate</label>
+<br>
+
+<span><b>$</b></span>
+
+<input type="text" id="rateinput" name="rateinput" size="5" maxlength="5">
+
+<!-- <label for="rateEl"><b>/</b> hour</label> -->
+<br>
+<br>
+</div>
+
+<span>Time worked</span>
+<br>
+
+<input type="text" name="hoursInput" size="3" maxlength="3">
+<label for="hoursInput">hours</label>
+<br>
+
+<input type="text" name="minutesInput" size="3" maxlength="2">
+<label for="minutesInput">minutes</label>
+<br>
+<br>
+
+
+<input type="button"
+       id="gobtn"
+       value="Go" 
+       onClick="go()">
+       <br>
+
+<input type="button"
+       id="reetbtn" 
+       value="Reset" 
+       onClick="reet()">
+
+<input type="button"
+       id="allovertimebtn"
+       value="All overtime"
+       onClick="allovertime()">
+
+</form>
+
+
+<p id="payEl">$0.00</p>
+
+<ul id="summary">
+
+<li id="li1"></li>
+
+<li id="li2"></li>
+
+<li id="li3"></li>
+
+<li id="li4"></li>
+
+<li id="li5"></li>
+
+<li id="li6"></li>
+</ul>
+
+<footer>2022 Tampa Bus Pay</footer>
+
+
+<script type="text/javascript" src="buspayRefactor.js"></script>
+<script type="text/javascript" src="buspayfunsRefactor.js"></script>
+</body>
+</html>
