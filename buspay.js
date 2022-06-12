@@ -1,5 +1,5 @@
 let rate = 25.99;
-let hours = 61;
+let hours = 38;
 let minutes = 19;
 let fractionhour = minutes / 60;
 let time = hours + fractionhour;
@@ -17,6 +17,17 @@ let straighttimepay = rate * 40;
 let overtimepayover40hours = overtime * overtimerate;
 
 let payover40hours = straighttimepay + overtimepayover40hours;
+
+
+let payEl = document.getElementById("payEl").innerHTML
+
+let li1 = document.getElementById("li1").innerHTML
+let li2 = document.getElementById("li2").innerHTML
+let li3 = document.getElementById("li3").innerHTML
+let li4 = document.getElementById("li4").innerHTML
+let li5 = document.getElementById("li5").innerHTML
+let li6 = document.getElementById("li6").innerHTML
+
 
 document.getElementById("rateEl").textContent = rate.toFixed(2);
 
