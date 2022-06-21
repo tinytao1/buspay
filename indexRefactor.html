@@ -8,100 +8,136 @@
 </head>
 <body>
 
-<h1 id="title"><span id="tampa">Tampa</span>
-       <br>
-       Bus Pay</h1>
+<h1 id="title"><span id="tampa">
+Tampa</span>
+<br>
+Bus Pay</h1>
+
 
 <form>
+<span id="selectRateTextLabel">Select pay rate:</span>
+<br>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$18.87
+$
 </button>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$19.94
+$
 </button>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$21.29
+$
 </button>
 <br>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$22.91
+$
 </button>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$24.80
+$
 </button>
 
 <button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$26.95
+$
 </button>
 <br>
-<br>
 
-<span>Effective: October</span>
+<span id="effectiveTextLabel">
+Effective: October</span>
 
 <input type="radio" name="effective" id="e2021" value="2021" checked>
-<label for="e2021">2021</label>
+<label for="e2021">
+2021</label>
 <br>
 
 <input type="radio" name="effective" id="e2022" value="2022">
-<label for="e2022">2022</label>
+<label for="e2022">
+2022</label>
 
 <input type="radio" name="effective" id="e2023" value="2023">
-<label for="e2023">2023</label>
-<br>
-<br>
+<label for="e2023">
+2023</label>
 
-<div id="payratediv">
+<div id="payRateDiv">
+<label id="payratetext" for="rateinput"></label>
 
-<label id="payratetext">Pay rate</label>
-<br>
+<span><b>
+$</b></span>
 
-<span><b>$</b></span>
-
-<input type="text" id="rateinput" name="rateinput" size="5" maxlength="5">
-
-<!-- <label for="rateEl"><b>/</b> hour</label> -->
-<br>
-<br>
+<input type="text" id="rateInputEl" name="rateinput" size="5" maxlength="8">
+<label for="rateEl">
+<b>/</b>
+hour</label>
 </div>
 
-<span>Time worked</span>
+<hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
+
+<div id="timeDiv">
+<span>Enter time:</span>
 <br>
 
-<input type="text" name="hoursInput" size="3" maxlength="3">
-<label for="hoursInput">hours</label>
+<div id="timeInputAlignmentDiv">
+<div id="timeInputDiv">
+<input type="text"
+       id="hoursInput" 
+       name="hoursInput" 
+       size="3" 
+       maxlength="3" 
+       class="timeInputEl">
+
+<label for="hoursInput" 
+       id="hoursInputLabel" 
+       class="timeInputLabel">
+
+hours</label>
 <br>
 
-<input type="text" name="minutesInput" size="3" maxlength="2">
-<label for="minutesInput">minutes</label>
-<br>
-<br>
+<input type="text" 
+       id="minutesInput" 
+       name="minutesInput" 
+       size="3" 
+       maxlength="2" 
+       class="timeInputEl">
 
+<label for="minutesInput" 
+       id="minutesInputLabel" 
+       class="timeInputLabel">
+minutes</label>
+</div>
+</div>
+
+</div>
+
+<hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
+
+<div id="goButtonsDiv">
 
 <input type="button"
-       id="gobtn"
+       id="goBtn"
        value="Go" 
-       onClick="go()">
+       onClick="go()"
+>
        <br>
 
 <input type="button"
-       id="reetbtn" 
+       id="reetBtn" 
        value="Reset" 
        onClick="reet()">
 
 <input type="button"
-       id="allovertimebtn"
+       id="allOvertimeBtn"
        value="All overtime"
        onClick="allovertime()">
 
+</div>
 </form>
 
 
-<p id="payEl">$0.00</p>
+
+
+<p id="payEl">$0</p>
 
 <ul id="summary">
 
@@ -116,10 +152,14 @@ $26.95
 <li id="li5"></li>
 
 <li id="li6"></li>
+
+<li id="li7"></li>
+
+<li id="li8"></li>
+
 </ul>
 
-<footer>2022 Tampa Bus Pay</footer>
-
+<footer>2022 Tampa Bus Pay.com</footer>
 
 <script type="text/javascript" src="buspayRefactor.js"></script>
 <script type="text/javascript" src="buspayfunsRefactor.js"></script>

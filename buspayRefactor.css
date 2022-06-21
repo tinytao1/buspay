@@ -3,14 +3,19 @@ body {
   background-color: rgb(232, 247, 247); /* rgb(238, 246, 238)*/
   text-align: center;
   font-family: helvetica, sans-serif;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h1 {font-family: Arial, Helvetica, sans-serif;
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
    color: rgb(77, 77, 77);
    font-size: 30px;
 }
 
-button {font-size: 18px;
+button {
+  font-size: 18px;
   border: solid 1px black;
   padding: 5px 8px;
   margin: 4px 8px;
@@ -20,32 +25,99 @@ button {font-size: 18px;
 
 input {font-size: 20px;}
 
+hr {
+  width: 60%;
+}
+
+#selectRateTextLabel { /*empty of content*/
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#payRateDiv {
+  font-size: ;
+  padding-top: 10px;
+  padding-bottom: 17px;
+}
+
+#effectiveTextLabel {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#timeDiv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#timeInputAlignmentDiv {
+  text-align: left;
+  margin-top: 10px;
+}
+
+#timeInputDiv {
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#goButtonsDiv {
+  margin-top: 30px;
+}
+
+#goBtn {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgb(140, 217, 175);
+}
+
+#reetBtn {
+  padding: 7px 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#allOvertimeBtn {
+  padding: 7px 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+  font-size: 16px;
+  margin-top: 10px;
+
+}
+
 #tampa {
   font-family: helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 20px;
 }
 
-#payratediv {
+#payRateDiv {
   width: 200px;
-  margin-left: auto;
+  background-color: ; cornsilk;
+  margin-top: 10px;
   margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
 }
-
-#payratetext {
-  color: ;
-  text-align: ;
-  padding-left: ;}
 
 #payEl {
   font-family: times, serif;
-  font-size:30px;
+  font-size:36px;
   font-weight: ;
   text-decoration:underline;
-}
-
-#allovertimebtn {
-  display: ; /*none;*/
 }
 
 #summary {
@@ -59,7 +131,7 @@ input {font-size: 20px;}
 ul {list-style-type: disc;} /*circle none square disc*/
 
 
-#li1, #li2, #li3, #li4, #li5, #li6 {
+#li1, #li2, #li3, #li4, #li5, #li6, #li7, #li8 {
   display: none;
 }
 
