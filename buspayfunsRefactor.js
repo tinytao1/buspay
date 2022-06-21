@@ -3,7 +3,7 @@
 
 
 function onloadSelectEffectiveDateForPayRateButtons() {
-    document.getElementById("e2021").checked = true;
+    // document.getElementById("e2021").checked = true; -- This doesn't 
 }
 
 
