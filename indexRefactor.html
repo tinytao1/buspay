@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width" />
   <title>Bus Pay Tampa</title>
   <link rel="stylesheet" href="buspayRefactor.css" />
+  <script type="text/javascript">
+
+  </script>
 </head>
-<body>
+
+<body onload="onloadSelectEffectiveDateForPayRateButtons()">
 
 <h1 id="title"><span id="tampa">
 Tampa</span>
@@ -18,45 +22,84 @@ Bus Pay</h1>
 <span id="selectRateTextLabel">Select pay rate:</span>
 <br>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()"
+       id="step1" 
+       type="button" 
+       class="payratebtn"
+       value="18.87" >
+$18.87
 </button>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()" 
+       id="step2"
+       type="button"
+       class="payratebtn"
+       value="19.94" >
+$19.94
 </button>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()" 
+       id="step3" 
+       type="button" 
+       class="payratebtn"
+       value="21.29" >
+$21.29
 </button>
 <br>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()" 
+       id="step4" 
+       type="button" 
+       class="payratebtn"
+       value="22.91" >
+$22.91
 </button>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()" 
+       id="step5" 
+       type="button" 
+       class="payratebtn"
+       value="24.80" >
+$24.80
 </button>
 
-<button onclick="step1()" id="step1el" type="button" class="payratebtn">
-$
+<button onclick="step1()" 
+       id="step6" 
+       type="button" 
+       class="payratebtn"
+       value="26.95" >
+$26.95
 </button>
 <br>
 
 <span id="effectiveTextLabel">
 Effective: October</span>
 
-<input type="radio" name="effective" id="e2021" value="2021" checked>
+<input type="radio" 
+       name="effective" 
+       id="e2021" 
+       value="2021"
+       onclick="e2021RatesInsertIntoButtons()">
+
 <label for="e2021">
 2021</label>
 <br>
 
-<input type="radio" name="effective" id="e2022" value="2022">
+<input type="radio" 
+       name="effective" 
+       id="e2022" 
+       value="2022"
+       onclick="e2022RatesInsertIntoButtons()" >
+
 <label for="e2022">
 2022</label>
 
-<input type="radio" name="effective" id="e2023" value="2023">
+<input type="radio" 
+       name="effective" 
+       id="e2023" 
+       value="2023"
+       onclick="e2023RatesInsertIntoButtons()" >
+
 <label for="e2023">
 2023</label>
 

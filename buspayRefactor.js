@@ -1,6 +1,6 @@
-let rate = 25.99;
-let hours = 38;
-let minutes = 19;
+let rate;
+let hours;
+let minutes;
 let fractionhour = minutes / 60;
 let time = hours + fractionhour;
 let pay = time * rate;
@@ -20,8 +20,12 @@ let li5 = document.getElementById("li5").innerHTML
 let li6 = document.getElementById("li6").innerHTML
 
 
-document.getElementById("rateEl").textContent = rate.toFixed(2);
-document.getElementById("hoursEl").textContent = hours;
-document.getElementById("minutesEl").textContent = minutes;
+
+
+
+
+// document.getElementById("rateEl").textContent = rate.toFixed(2);
+// document.getElementById("hoursEl").textContent = hours;
+// document.getElementById("minutesEl").textContent = minutes;
 
 

@@ -1,15 +1,116 @@
-function go() {
-
-    if (time < 40) {
-
-       document.getElementById("payEl").innerHTML = "$" + pay.toFixed(2);
 
 
 
-   }
+
+function onloadSelectEffectiveDateForPayRateButtons() {
+    document.getElementById("e2021").checked = true;
 }
 
-function reet() {
+
+
+function e2021RatesInsertIntoButtons() {
+    let step1=document.getElementById("step1");
+    step1.innerHTML = "$18.87";
+    step1.value = 18.87
+    let step2=document.getElementById("step2");
+    step2.innerHTML = "$19.94";
+    step2.value = 19.94;
+    let step3=document.getElementById("step3");
+    step3.innerHTML = "$21.29";
+    step3.value = 21.29
+    let step4=document.getElementById("step4");
+    step4.innerHTML = "$22.91";
+    step4.value = 22.91;    
+    let step5=document.getElementById("step5");
+    step5.innerHTML = "$24.80";
+    step5.value = 24.80
+    let step6=document.getElementById("step6");
+    step6.innerHTML = "$26.95";
+    step6.value = 26.95;
+}
+
+function e2022RatesInsertIntoButtons() {
+    let step1=document.getElementById("step1");
+    let step2=document.getElementById("step2");
+    let step3=document.getElementById("step3");
+    let step4=document.getElementById("step4");
+    let step5=document.getElementById("step5");
+    let step6=document.getElementById("step6");
+    step1.innerHTML = "$19.45";
+    step1.value = 19.45;
+    step2.innerHTML = "$20.56";
+    step2.value = 20.56;
+    step3.innerHTML = "$21.95";
+    step3.value = 21.95;
+    step4.innerHTML = "$23.62";
+    step4.value = 23.62;
+    step5.innerHTML = "$25.57";
+    step5.value = 25.57;
+    step6.innerHTML = "$27.79";
+    step6.value = 27.79;
+}
+
+function e2023RatesInsertIntoButtons() {
+    let step1=document.getElementById("step1");
+    let step2=document.getElementById("step2");
+    let step3=document.getElementById("step3");
+    let step4=document.getElementById("step4");
+    let step5=document.getElementById("step5");
+    let step6=document.getElementById("step6");
+    step1.innerHTML = "$20.03";
+    step1.value = 20.03;
+    step2.innerHTML = "$21.18";
+    step2.value = 21.18;
+    step3.innerHTML = "$22.61";
+    step3.value = 22.61;
+    step4.innerHTML = "$24.33";
+    step4.value = 24.33;
+    step5.innerHTML = "$26.33";
+    step5.value = 26.33;
+    step6.innerHTML = "$28.62";
+    step6.value = 28.62;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// function go() {
+    // Grab user inputs for rate, hours, and minutes.
+    rate = document.getElementById("rateinput").value;
+    hours = document.getElementById("hoursinput").value;
+    minutes = document.getElementById("minutesinput").value;
+    rate = parseFloat(rate)
+    hours = parseFloat(hours)
+    minutes = parseFloat(minutes)
+    document.getElementById("payEl").innerHTML = "$" + pay.toFixed(2);
+    // alert(minutes + " " + rate + " " hours);
+        // Show the pay.
+
+
+    //if (time < 40) {
+        //
+        //
+       // document.getElementById("payEl").innerHTML = "$" + pay.toFixed(2);
+      //alert(rate);
+      //
+      // }
+}
+
+//function reet() {
     document.getElementById("payEl").textContent = "$0.00"
 
 }
