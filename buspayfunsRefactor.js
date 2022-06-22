@@ -1,11 +1,36 @@
 
-let rate = 0;
+let rate = 0; 
 let hours = 0;
 let minutes = 0;
-let minutesConversion = minutes / 60;
-let fractionHour = minutesConversion.toFixed(5);
-let time = hours + fractionHour;
-let pay = time * rate;
+let minutesConversion = 0;
+let fractionHour = 0;
+let time = 0;
+let pay = 0;
+
+
+function calculatePay() {
+    rate = document.getElementById("rateInputEl").value;
+    rate = parseFloat(rate);
+    hours = document.getElementById("hoursInputEl").value;
+    hours = parseFloat(hours);
+    if (isNaN(hours)) hours = 0;
+    minutes = document.getElementById("minutesInputEl").value;
+    minutes = parseFloat(minutes);
+    if (isNaN(minutes)) minutes = 0;
+    time = hours + (minutes / 60);
+    pay = rate * time;
+
+    // if (isNaN(pay)) pay = 
+    document.getElementById("showPayEl").textContent = "$" + pay.toFixed(2);
+
+    //alert(minutes);
+ }
+
+/*
+
+minutesConversion = minutes / 60;
+    fractionHour = minutesConversion.toFixed(5);
+    fractionHour = parseFloat(fractionHour);
 
 function calculatePay() {
     let grabRate = document.getElementById("rateInputEl").value // grab rate
@@ -28,6 +53,8 @@ function calculatePay() {
     // document.getElementById("showPayEl").innerHTML= "$" + pay.toFixed(2);
     
 }
+*/
+
 
 let overtimerate = rate * 1.5;
 let overtime = time - 40;
