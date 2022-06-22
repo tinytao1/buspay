@@ -3,32 +3,48 @@
 
 
 let rate;
-let step1_2021 = 18.87;
 
 
-function selectRateButtonEvent(step1, ) {
+
+/*
+function selectRateButton(buttonId, id2, id3, id4, id5, id6) {
+    style_selectedRateButton("buttonId");                   // style the rate button
+    unstyle_unselectedRateButtons(id2, id3, id4, id5, id6);  // un-style the other rate buttons
+    // x-fer value to rateInputEl
+}
+
+function style_selectedRateButton(id1) {
+    document.getElementById("id1").style.border = "2px solid blue";
+    document.getElementById("id1").style.backgroundColor = "rgb(255, 219, 153)"; // lighter-than-moccasin by 2 shades
+}
+function unstyle_unselectedRateButtons(id2, id3, id4, id5, id6) {
+    document.getElementById("id1").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id2").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id3").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id4").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id5").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id6").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("id2").style.border = "1px solid black";
+    document.getElementById("id2").style.border = "1px solid black";
+    document.getElementById("id3").style.border = "1px solid black";
+    document.getElementById("id4").style.border = "1px solid black";
+    document.getElementById("id5").style.border = "1px solid black";
+    document.getElementById("id6").style.border = "1px solid black";
+}
+
+
+function selectRateButtonTrial(step1, ) {
     rate = step1;                                           // set the rate variable value.
     document.getElementById("rateInputEl").value = step1;   // insert rate into display input rate.
     style_selectedRateButton("step1ButtonEl");        // style the rate button element.
     //style_unselectedRateButton("step6el")       // undo styling for unselected buttons.
 }
 
-function style_selectedRateButton(elementId) {
-    document.getElementById(elementId).style.border = "2px solid blue";
-    document.getElementById(elementId).style.borderRadius = "5px";
-    document.getElementById(elementId).style.backgroundColor = "rgb(255, 219, 153)"; //moccasin
-}
-function style_unselectedRateButton(elementId) {
-    document.getElementById(elementId).style.border = "";
-    document.getElementById(elementId).style.borderRadius = "";
-    document.getElementById(elementId).style.backgroundColor = "";
-}
+*/
 
 function theResetButtonActions(){
     ratesInsertIntoButtons(
     18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
-    style_unselectedRateButton("step1ButtonEl");
-
 }
 
 function onloadratesInsertIntoButtons() {
@@ -38,12 +54,144 @@ function onloadratesInsertIntoButtons() {
 
 function ratesInsertIntoButtons(
     rate1, rate2, rate3, rate4, rate5, rate6) {
-    document.getElementById("step1ButtonEl").value = "$" + rate1.toFixed(2);
-    document.getElementById("step2El").value = "$" + rate2.toFixed(2);
-    document.getElementById("step3El").value = "$" + rate3.toFixed(2);
-    document.getElementById("step4El").value = "$" + rate4.toFixed(2);
-    document.getElementById("step5El").value = "$" + rate5.toFixed(2);
-    document.getElementById("step6El").value = "$" + rate6.toFixed(2);
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step1Button").value = "$" + rate1.toFixed(2);
+    document.getElementById("step2Button").value = "$" + rate2.toFixed(2);
+    document.getElementById("step3Button").value = "$" + rate3.toFixed(2);
+    document.getElementById("step4Button").value = "$" + rate4.toFixed(2);
+    document.getElementById("step5Button").value = "$" + rate5.toFixed(2);
+    document.getElementById("step6Button").value = "$" + rate6.toFixed(2);
+}
+
+function selectStep1() {
+    let buttonValue = document.getElementById("step1Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step1Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step1Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";
+}
+
+function selectStep2() {
+    let buttonValue = document.getElementById("step2Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step2Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step2Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";
+}
+
+function selectStep3() {
+    let buttonValue = document.getElementById("step3Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step3Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step3Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";
+}
+
+function selectStep4() {
+    let buttonValue = document.getElementById("step4Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step4Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step4Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";
+}
+
+function selectStep5() {
+    let buttonValue = document.getElementById("step5Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step5Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step5Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";
+}
+
+function selectStep6() {
+    let buttonValue = document.getElementById("step6Button").value;  // Remove "$" in front button value string.
+    buttonValue = buttonValue.slice(1);
+    document.getElementById("rateInputEl").value = buttonValue;     // x-fer value to rate Input Element.
+    document.getElementById("step6Button").style.border = 
+                            "2px solid blue";                       // style the rate button
+    document.getElementById("step6Button").style.backgroundColor = 
+                            "rgb(255, 219, 153)";                   // style the rate button = lighter-than-moccasin by 2 shades
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // un-style the other rate buttons // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)"; // un-style the other rate buttons 
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";
 }
 
 
@@ -52,11 +200,23 @@ function ratesInsertIntoButtons(
 
 
 
-
-
-
-
 /*
+
+    document.getElementById("step1Button").value = "$" + rate1.toFixed(2);
+    document.getElementById("step2Button").value = "$" + rate2.toFixed(2);
+    document.getElementById("step3Button").value = "$" + rate3.toFixed(2);
+    document.getElementById("step4Button").value = "$" + rate4.toFixed(2);
+    document.getElementById("step5Button").value = "$" + rate5.toFixed(2);
+    document.getElementById("step6Button").value = "$" + rate6.toFixed(2);
+
+    document.getElementById("step1Button").value = rate1.toFixed(2);
+    document.getElementById("step2Button").value = rate2.toFixed(2);
+    document.getElementById("step3Button").value = rate3.toFixed(2);
+    document.getElementById("step4Button").value = rate4.toFixed(2);
+    document.getElementById("step5Button").value = rate5.toFixed(2);
+    document.getElementById("step6Button").value = rate6.toFixed(2);
+}
+
 // function go() {
     // Grab user inputs for rate, hours, and minutes.
     rate = document.getElementById("rateinput").value;
