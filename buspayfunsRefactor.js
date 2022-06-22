@@ -1,14 +1,64 @@
 
+let rate = 0;
+let hours = 0;
+let minutes = 0;
+let minutesConversion = minutes / 60;
+let fractionHour = minutesConversion.toFixed(5);
+let time = hours + fractionHour;
+let pay = time * rate;
+
+function calculatePay() {
+    let grabRate = document.getElementById("rateInputEl").value // grab rate
+    grabRate = parseFloat(grabRate);          // convert rate string to number
+    rate = grabRate;                        // insert numb val into "rate"
+
+    let grabHours = document.getElementById("hoursInputEl").value // grab hours
+    grabHours = parseFloat(grabHours);          // convert hours string to number
+    hours = grabHours;                        // insert numb val into "hours"
+
+    let grabMinutes = document.getElementById("minutesInputEl").value // grab minutes
+    grabMinutes = parseFloat(grabMinutes);          // convert minutes string to number
+    minutes = grabMinutes;                        // insert numb val into "minutes"
+
+    let showPay = document.getElementById("showPayEl");
+
+    // if (rate < 1) {showPay.innerHTML = " - rate is zero -"};
+
+
+    // document.getElementById("showPayEl").innerHTML= "$" + pay.toFixed(2);
+    
+}
+
+let overtimerate = rate * 1.5;
+let overtime = time - 40;
+let overtimepay = overtime * overtimerate;
+let straighttimepay = rate * 40;
+
+let straightplusoverpay = straighttimepay + overtimepay;
+
+// document.getElementById("rateEl").textContent = rate.toFixed(2);
+// document.getElementById("hoursEl").textContent = hours;
+// document.getElementById("minutesEl").textContent = minutes;
+
+let li1 = document.getElementById("li1").innerHTML
+let li2 = document.getElementById("li2").innerHTML
+let li3 = document.getElementById("li3").innerHTML
+let li4 = document.getElementById("li4").innerHTML
+let li5 = document.getElementById("li5").innerHTML
+let li6 = document.getElementById("li6").innerHTML
 
 
 
-let rate;
 
 
 
-function theResetButtonActions(){
+
+
+
+function theResetButtonActions() {
     ratesInsertIntoButtons(
     18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
+    document.getElementById("showPayEl").innerHTML = "$0";
 }
 
 function onloadratesInsertIntoButtons() {

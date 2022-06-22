@@ -128,7 +128,7 @@ hour</label>
 <div id="timeInputAlignmentDiv">
 <div id="timeInputDiv">
 <input type="text"
-       id="hoursInput" 
+       id="hoursInputEl" 
        name="hoursInput" 
        size="3" 
        maxlength="3" 
@@ -142,7 +142,7 @@ hours</label>
 <br>
 
 <input type="text" 
-       id="minutesInput" 
+       id="minutesInputEl" 
        name="minutesInput" 
        size="3" 
        maxlength="2" 
@@ -164,14 +164,15 @@ minutes</label>
 <input type="button"
        id="goBtn"
        value="Go" 
-       onClick="go()"
+       onClick="calculatePay()"
 >
        <br>
 
 <input type="reset"
        id="reetBtn" 
        value="Reset" 
-       onClick="theResetButtonActions()">
+       onClick="theResetButtonActions()"
+       onmousedown="mouseDown()" >
 
 <input type="button"
        id="allOvertimeBtn"
@@ -184,7 +185,7 @@ minutes</label>
 
 
 
-<p id="payEl">$0</p>
+<p id="showPayEl">$0</p>
 
 <ul id="summary">
 
@@ -208,7 +209,6 @@ minutes</label>
 
 <footer>2022 Tampa Bus Pay.com</footer>
 
-<script type="text/javascript" src="buspayRefactor.js"></script>
 <script type="text/javascript" src="buspayfunsRefactor.js"></script>
 </body>
 </html>
