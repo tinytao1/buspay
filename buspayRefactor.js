@@ -1,16 +1,15 @@
-let rate;
 let hours;
 let minutes;
-let fractionhour = minutes / 60;
-let time = hours + fractionhour;
-let pay = time * rate;
+//let fractionhour = minutes / 60;
+//let time = hours + fractionhour;
+//let pay = time * rate;
 
-let overtimerate = rate * 1.5;
-let overtime = time - 40;
-let overtimepay = overtime * overtimerate;
-let straighttimepay = rate * 40;
+//let overtimerate = rate * 1.5;
+//let overtime = time - 40;
+//let overtimepay = overtime * overtimerate;
+//let straighttimepay = rate * 40;
 
-let straightplusoverpay = straighttimepay + overtimepay;
+//let straightplusoverpay = straighttimepay + overtimepay;
 
 let li1 = document.getElementById("li1").innerHTML
 let li2 = document.getElementById("li2").innerHTML

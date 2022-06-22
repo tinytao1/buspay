@@ -2,80 +2,49 @@
 
 
 
-function onloadSelectEffectiveDateForPayRateButtons() {
-    // document.getElementById("e2021").checked = true; -- This doesn't 
+let rate;
+let step1_2021 = 18.87;
+
+
+function selectRateButtonEvent(step1, ) {
+    rate = step1;                                           // set the rate variable value.
+    document.getElementById("rateInputEl").value = step1;   // insert rate into display input rate.
+    style_selectedRateButton("step1ButtonEl");        // style the rate button element.
+    //style_unselectedRateButton("step6el")       // undo styling for unselected buttons.
 }
 
-
-
-function e2021RatesInsertIntoButtons() {
-    let step1=document.getElementById("step1");
-    step1.innerHTML = "$18.87";
-    step1.value = 18.87
-    let step2=document.getElementById("step2");
-    step2.innerHTML = "$19.94";
-    step2.value = 19.94;
-    let step3=document.getElementById("step3");
-    step3.innerHTML = "$21.29";
-    step3.value = 21.29
-    let step4=document.getElementById("step4");
-    step4.innerHTML = "$22.91";
-    step4.value = 22.91;    
-    let step5=document.getElementById("step5");
-    step5.innerHTML = "$24.80";
-    step5.value = 24.80
-    let step6=document.getElementById("step6");
-    step6.innerHTML = "$26.95";
-    step6.value = 26.95;
+function style_selectedRateButton(elementId) {
+    document.getElementById(elementId).style.border = "2px solid blue";
+    document.getElementById(elementId).style.borderRadius = "5px";
+    document.getElementById(elementId).style.backgroundColor = "rgb(255, 201, 102)"; //moccasin
+}
+function style_unselectedRateButton(elementId) {
+    document.getElementById(elementId).style.border = "";
+    document.getElementById(elementId).style.borderRadius = "";
+    document.getElementById(elementId).style.backgroundColor = "";
 }
 
-function e2022RatesInsertIntoButtons() {
-    let step1=document.getElementById("step1");
-    let step2=document.getElementById("step2");
-    let step3=document.getElementById("step3");
-    let step4=document.getElementById("step4");
-    let step5=document.getElementById("step5");
-    let step6=document.getElementById("step6");
-    step1.innerHTML = "$19.45";
-    step1.value = 19.45;
-    step2.innerHTML = "$20.56";
-    step2.value = 20.56;
-    step3.innerHTML = "$21.95";
-    step3.value = 21.95;
-    step4.innerHTML = "$23.62";
-    step4.value = 23.62;
-    step5.innerHTML = "$25.57";
-    step5.value = 25.57;
-    step6.innerHTML = "$27.79";
-    step6.value = 27.79;
+function theResetButtonActions(){
+    ratesInsertIntoButtons(
+    18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
+    style_unselectedRateButton("step1ButtonEl");
+
 }
 
-function e2023RatesInsertIntoButtons() {
-    let step1=document.getElementById("step1");
-    let step2=document.getElementById("step2");
-    let step3=document.getElementById("step3");
-    let step4=document.getElementById("step4");
-    let step5=document.getElementById("step5");
-    let step6=document.getElementById("step6");
-    step1.innerHTML = "$20.03";
-    step1.value = 20.03;
-    step2.innerHTML = "$21.18";
-    step2.value = 21.18;
-    step3.innerHTML = "$22.61";
-    step3.value = 22.61;
-    step4.innerHTML = "$24.33";
-    step4.value = 24.33;
-    step5.innerHTML = "$26.33";
-    step5.value = 26.33;
-    step6.innerHTML = "$28.62";
-    step6.value = 28.62;
+function onloadratesInsertIntoButtons() {
+    ratesInsertIntoButtons(
+    18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
 }
 
-
-
-
-
-
+function ratesInsertIntoButtons(
+    rate1, rate2, rate3, rate4, rate5, rate6) {
+    document.getElementById("step1ButtonEl").value = "$" + rate1.toFixed(2);
+    document.getElementById("step2El").value = "$" + rate2.toFixed(2);
+    document.getElementById("step3El").value = "$" + rate3.toFixed(2);
+    document.getElementById("step4El").value = "$" + rate4.toFixed(2);
+    document.getElementById("step5El").value = "$" + rate5.toFixed(2);
+    document.getElementById("step6El").value = "$" + rate6.toFixed(2);
+}
 
 
 

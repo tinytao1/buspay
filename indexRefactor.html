@@ -10,7 +10,7 @@
   </script>
 </head>
 
-<body onload="onloadSelectEffectiveDateForPayRateButtons()">
+<body onload="onloadratesInsertIntoButtons()">
 
 <h1 id="title"><span id="tampa">
 Tampa</span>
@@ -22,54 +22,54 @@ Bus Pay</h1>
 <span id="selectRateTextLabel">Select pay rate:</span>
 <br>
 
-<button onclick="step1()"
-       id="step1" 
+<input onclick="selectRateButtonEvent(step1_2021)"
+       id="step1ButtonEl" 
+       name="step1" 
        type="button" 
-       class="payratebtn"
-       value="18.87" >
-$18.87
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step1"></label>
 
-<button onclick="step1()" 
-       id="step2"
+<input onclick="step1()" 
+       id="step2El"
+       name="step2" 
        type="button"
-       class="payratebtn"
-       value="19.94" >
-$19.94
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step2"></label>
 
-<button onclick="step1()" 
-       id="step3" 
+<input onclick="step1()" 
+       id="step3El"
+       name="step3" 
        type="button" 
-       class="payratebtn"
-       value="21.29" >
-$21.29
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step3"></label>
 <br>
 
-<button onclick="step1()" 
-       id="step4" 
+<input onclick="step1()" 
+       id="step4El"
+       name="step4" 
        type="button" 
-       class="payratebtn"
-       value="22.91" >
-$22.91
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step4"></label>
 
-<button onclick="step1()" 
-       id="step5" 
+<input onclick="step1()" 
+       id="step5El" 
+       name="step5" 
        type="button" 
-       class="payratebtn"
-       value="24.80" >
-$24.80
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step5"></label>
 
-<button onclick="step1()" 
-       id="step6" 
+<input onclick="step1()" 
+       id="step6El" 
+       name="step6" 
        type="button" 
-       class="payratebtn"
-       value="26.95" >
-$26.95
-</button>
+       class="payRateBtn"
+       value="" >
+<label for="step6"></label>
 <br>
 
 <span id="effectiveTextLabel">
@@ -79,7 +79,9 @@ Effective: October</span>
        name="effective" 
        id="e2021" 
        value="2021"
-       onclick="e2021RatesInsertIntoButtons()" checked>
+       onclick="ratesInsertIntoButtons(
+       18.87, 19.94, 21.29, 22.91, 24.80, 26.95)" 
+       checked>
 
 <label for="e2021">
 2021</label>
@@ -89,7 +91,8 @@ Effective: October</span>
        name="effective" 
        id="e2022" 
        value="2022"
-       onclick="e2022RatesInsertIntoButtons()" >
+       onclick="ratesInsertIntoButtons(
+       19.45, 20.56, 21.95, 23.62, 25.57, 27.79)" >
 
 <label for="e2022">
 2022</label>
@@ -98,7 +101,8 @@ Effective: October</span>
        name="effective" 
        id="e2023" 
        value="2023"
-       onclick="e2023RatesInsertIntoButtons()" >
+       onclick="ratesInsertIntoButtons(
+       20.03, 21.18, 22.61, 24.33, 26.33, 28.62)" >
 
 <label for="e2023">
 2023</label>
@@ -167,7 +171,7 @@ minutes</label>
 <input type="reset"
        id="reetBtn" 
        value="Reset" 
-       onClick="reet()">
+       onClick="theResetButtonActions()">
 
 <input type="button"
        id="allOvertimeBtn"
