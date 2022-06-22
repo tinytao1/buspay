@@ -16,7 +16,7 @@ function selectRateButtonEvent(step1, ) {
 function style_selectedRateButton(elementId) {
     document.getElementById(elementId).style.border = "2px solid blue";
     document.getElementById(elementId).style.borderRadius = "5px";
-    document.getElementById(elementId).style.backgroundColor = "rgb(255, 201, 102)"; //moccasin
+    document.getElementById(elementId).style.backgroundColor = "rgb(255, 219, 153)"; //moccasin
 }
 function style_unselectedRateButton(elementId) {
     document.getElementById(elementId).style.border = "";
