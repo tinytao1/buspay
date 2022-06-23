@@ -7,10 +7,29 @@ let fractionHour = 0;
 let time = 0;
 let pay = 0;
 
+let overtime = 0;
+let overtimeRate = 0;
+let overtimePay = 0;
+
+let straightTime = 0;
+let straightTimePay = 0;
+let straightPlusOvertimePay = 0;
+
+let li1 = document.getElementById("li1");
+let li2 = document.getElementById("li2");
+let li3 = document.getElementById("li3");
+let li4 = document.getElementById("li4");
+let li5 = document.getElementById("li5");
+let li6 = document.getElementById("li6");
+let li7 = document.getElementById("li6");
+let li8 = document.getElementById("li6");
+let li9 = document.getElementById("li6");
+
 
 function calculatePay() {
     rate = document.getElementById("rateInputEl").value;
     rate = parseFloat(rate);
+    if (isNaN(rate)) rate = 0;
     hours = document.getElementById("hoursInputEl").value;
     hours = parseFloat(hours);
     if (isNaN(hours)) hours = 0;
@@ -20,59 +39,50 @@ function calculatePay() {
     time = hours + (minutes / 60);
     pay = rate * time;
 
-    // if (isNaN(pay)) pay = 
-    document.getElementById("showPayEl").textContent = "$" + pay.toFixed(2);
+    if (time === 0) {document.getElementById("showPayEl").innerHTML = "$" + pay.toFixed(2); return;}
+    else if (time <= 40) {
+        let fractionHour = minutes / 60; //alert(typeof fractionHour); 
+        document.getElementById("showPayEl").innerHTML = "$" + pay.toFixed(2);
+        li1.innerHTML = minutes + " minutes " + "/" + " 60 = " + fractionHour.toFixed(4) + " of an hour.";
+        li2.innerHTML =  time.toFixed(4) + " hours, multiplied by $" + rate + " = $" + pay.toFixed(4);
+        li1.style.display = "list-item";
+        li2.style.display = "list-item";
+}
+    else {
+        overtime = time - 40;
+        overtimeRate = rate * 1.5;
+        straightTime = 40;
 
-    //alert(minutes);
- }
+        straightTimePay = straightTime * rate;
+
+        overtimePay = overtime * overtimeRate; //good
+ 
+        straightPlusOvertimePay = straightTimePay + overtimePay; //good
+
+        document.getElementById("showPayEl").innerHTML = "$" + straightPlusOvertimePay.toFixed(2); //good
+
+        li1.innerHTML = "<b>Straight time</b>" + "$" + straightTimePay;
+
+
+    }
+}
 
 /*
 
-minutesConversion = minutes / 60;
-    fractionHour = minutesConversion.toFixed(5);
-    fractionHour = parseFloat(fractionHour);
-
-function calculatePay() {
-    let grabRate = document.getElementById("rateInputEl").value // grab rate
-    grabRate = parseFloat(grabRate);          // convert rate string to number
-    rate = grabRate;                        // insert numb val into "rate"
-
-    let grabHours = document.getElementById("hoursInputEl").value // grab hours
-    grabHours = parseFloat(grabHours);          // convert hours string to number
-    hours = grabHours;                        // insert numb val into "hours"
-
-    let grabMinutes = document.getElementById("minutesInputEl").value // grab minutes
-    grabMinutes = parseFloat(grabMinutes);          // convert minutes string to number
-    minutes = grabMinutes;                        // insert numb val into "minutes"
-
-    let showPay = document.getElementById("showPayEl");
-
-    // if (rate < 1) {showPay.innerHTML = " - rate is zero -"};
 
 
-    // document.getElementById("showPayEl").innerHTML= "$" + pay.toFixed(2);
+
     
-}
+
 */
 
 
-let overtimerate = rate * 1.5;
-let overtime = time - 40;
-let overtimepay = overtime * overtimerate;
-let straighttimepay = rate * 40;
-
-let straightplusoverpay = straighttimepay + overtimepay;
 
 // document.getElementById("rateEl").textContent = rate.toFixed(2);
 // document.getElementById("hoursEl").textContent = hours;
 // document.getElementById("minutesEl").textContent = minutes;
 
-let li1 = document.getElementById("li1").innerHTML
-let li2 = document.getElementById("li2").innerHTML
-let li3 = document.getElementById("li3").innerHTML
-let li4 = document.getElementById("li4").innerHTML
-let li5 = document.getElementById("li5").innerHTML
-let li6 = document.getElementById("li6").innerHTML
+
 
 
 
@@ -86,6 +96,15 @@ function theResetButtonActions() {
     ratesInsertIntoButtons(
     18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
     document.getElementById("showPayEl").innerHTML = "$0";
+    li1.style.display = "none";
+    li2.style.display = "none";
+    li3.style.display = "none";
+    li4.style.display = "none";
+    li5.style.display = "none";
+    li6.style.display = "none";
+    li7.style.display = "none";
+    li8.style.display = "none";
+    li9.style.display = "none";
 }
 
 function onloadratesInsertIntoButtons() {
