@@ -69,9 +69,7 @@ hr {
 }
 
 #goBtn {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  border: solid 2px rgb(64, 191, 121);
   padding: 10px 20px;
   border-radius: 5px;
   background-color: rgb(140, 217, 175);
@@ -79,20 +77,16 @@ hr {
 
 #reetBtn {
   padding: 7px 15px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  border: solid 2px rgb(128, 128, 128);
   border-radius: 5px;
   background-color: rgb(242, 242, 242);
   font-size: 18px;
   margin-top: 10px;
 }
 
-#allOvertimeBtn {
+#allOvertimeButton {
   padding: 7px 15px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  border: solid 2px rgb(128, 128, 128);
   border-radius: 5px;
   background-color: rgb(242, 242, 242);
   font-size: 18px;
@@ -122,7 +116,7 @@ hr {
   text-decoration:underline;
 }
 
-#summaryEl {
+#summaryEl, #summaryEl2 {
   width: 400px;
   text-align: left;
   margin-left: auto;
@@ -144,14 +138,9 @@ footer {margin-top: 700px;}
 
 
 /*
-button {
-  font-size: 18px;
-  border: solid 1px black;
-  padding: 5px 8px;
-  margin: 4px 8px;
-  border-radius: 15px;
-  background-color: rgb(242, 242, 242); // light grey color
-}
+
+
+
 */
 
 
