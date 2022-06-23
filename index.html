@@ -6,52 +6,184 @@
   <title>Bus Pay Tampa</title>
   <link rel="stylesheet" href="buspay.css" />
 </head>
-<body>
 
-<h1 id="title"><span id="tampa">Tampa</span>
-       <br>
-       Bus Pay</h1>
+<body onload="onloadratesInsertIntoButtons()">
+
+<h1 id="title"><span id="tampa">
+Tampa</span>
+<br>
+Bus Pay</h1>
+
 
 <form>
-<span>Pay rate:</span><br>
-
-<span><b>$</b></span><span id="rateEl"></span>
-<label for="rateEl"><b>/</b> hour</label>
-<br><br>
-
-
-<span>Time worked:</span>
-<br>
-<span id="hoursEl"></span>
-<label for="hoursEl">hours</label>
+<span id="selectRateTextLabel">Select pay rate:</span>
 <br>
 
-<span id="minutesEl"></span>
-<label for="minutesEl"> minutes</label>
-      <br><br>
+<input onclick="selectStep1()"
+       id="step1Button" 
+       name="step1" 
+       type="button" 
+       class="payRateBtn"
+       value="" >
+<label for="step1"></label>
 
+<input onclick="selectStep2()" 
+       id="step2Button"
+       name="step2" 
+       type="button"
+       class="payRateBtn"
+       value="" >
+<label for="step2"></label>
+
+<input onclick="selectStep3()" 
+       id="step3Button"
+       name="step3" 
+       type="button" 
+       class="payRateBtn"
+       value="" >
+<label for="step3"></label>
+<br>
+
+<input onclick="selectStep4()" 
+       id="step4Button"
+       name="step4" 
+       type="button" 
+       class="payRateBtn"
+       value="" >
+<label for="step4"></label>
+
+<input onclick="selectStep5()" 
+       id="step5Button" 
+       name="step5" 
+       type="button" 
+       class="payRateBtn"
+       value="" >
+<label for="step5"></label>
+
+<input onclick="selectStep6()" 
+       id="step6Button" 
+       name="step6" 
+       type="button" 
+       class="payRateBtn"
+       value="" >
+<label for="step6"></label>
+<br>
+
+<span id="effectiveTextLabel">
+Effective: October</span>
+
+<input type="radio" 
+       name="effective" 
+       id="e2021" 
+       value="2021"
+       onclick="ratesInsertIntoButtons(
+       18.87, 19.94, 21.29, 22.91, 24.80, 26.95)" 
+       checked>
+
+<label for="e2021">
+2021</label>
+<br>
+
+<input type="radio" 
+       name="effective" 
+       id="e2022" 
+       value="2022"
+       onclick="ratesInsertIntoButtons(
+       19.45, 20.56, 21.95, 23.62, 25.57, 27.79)" >
+
+<label for="e2022">
+2022</label>
+
+<input type="radio" 
+       name="effective" 
+       id="e2023" 
+       value="2023"
+       onclick="ratesInsertIntoButtons(
+       20.03, 21.18, 22.61, 24.33, 26.33, 28.62)" >
+
+<label for="e2023">
+2023</label>
+
+<div id="payRateDiv">
+<label id="payratetext" for="rateinput"></label>
+
+<span><b>
+$</b></span>
+
+<input type="text" id="rateInputEl" name="rateinput" size="5" maxlength="8">
+<label for="rateEl">
+<b>/</b>
+hour</label>
+</div>
+
+<hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
+
+<div id="timeDiv">
+<span>Enter time:</span>
+<br>
+
+<div id="timeInputAlignmentDiv">
+<div id="timeInputDiv">
+<input type="text"
+       id="hoursInputEl" 
+       name="hoursInput" 
+       size="3" 
+       maxlength="3" 
+       class="timeInputEl">
+
+<label for="hoursInput" 
+       id="hoursInputLabel" 
+       class="timeInputLabel">
+
+hours</label>
+<br>
+
+<input type="text" 
+       id="minutesInputEl" 
+       name="minutesInput" 
+       size="3" 
+       maxlength="2" 
+       class="timeInputEl">
+
+<label for="minutesInput" 
+       id="minutesInputLabel" 
+       class="timeInputLabel">
+minutes</label>
+</div>
+</div>
+
+</div>
+
+<hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
+
+<div id="goButtonsDiv">
 
 <input type="button"
-       id="gobtn"
+       id="goBtn"
        value="Go" 
-       onClick="go()">
+       onClick="calculatePay()" >
        <br>
 
-<input type="button"
-       id="reetbtn" 
+<input type="reset"
+       id="reetBtn" 
        value="Reset" 
-       onClick="reeet()">
+       onClick="theResetButtonActions()"
+>
 
 <input type="button"
-       id="allovertimebtn"
-       value="All overtime"
-       onClick="allovertime()">
+       id="allOvertimeButton"
+       value="All Overtime"
+       onClick="allOvertime()">
+
+</div>
 </form>
 
 
-<p id="payEl">$0.00</p>
 
-<ul id="summary">
+
+<p id="showPayEl">$0</p>
+
+<ul id="summaryEl">
 
 <li id="li1"></li>
 
@@ -64,12 +196,17 @@
 <li id="li5"></li>
 
 <li id="li6"></li>
+
+<li id="li7"></li>
+
+<li id="li8"></li>
+
+<li id="li9"></li>
+
 </ul>
 
-<footer>2022 Tampa Bus Pay</footer>
-
+<footer>2022 Tampa Bus Pay.com</footer>
 
 <script type="text/javascript" src="buspay.js"></script>
-<script type="text/javascript" src="buspayfuns.js"></script>
 </body>
 </html>
