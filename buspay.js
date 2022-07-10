@@ -96,7 +96,7 @@ function calculatePay() {
         li5.innerHTML = 40 + " hours multiplied by $" + rate.toFixed(2) + " = $" + straightTimePay.toFixed(2);
 
         li6.style.display = "list-item";
-        li6.innerHTML = "$" + rate.toFixed(2) + " /hour multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
+        li6.innerHTML = "$" + rate.toFixed(2) + " /hour straight time<br>multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
 
         li7.style.display = "list-item";
         li7.innerHTML = overtime.toFixed(4) + " hours multiplied by $" + overtimeRate.toFixed(4) + " = $" + overtimePay.toFixed(4);

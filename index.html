@@ -12,11 +12,18 @@
 <h1 id="title"><span id="tampa">
 Tampa</span>
 <br>
-Bus Pay</h1>
+Bus Pay
+<br>
+<span id="subtitle">
+Daily & weekly pay calculator</span>
+</h1>
+
+
 
 
 <form>
-<span id="selectRateTextLabel">Select pay rate:</span>
+<span id="selectRateTextLabel">
+Select a pay rate:</span>
 <br>
 
 <input onclick="selectStep1()"
@@ -119,7 +126,10 @@ hour</label>
 <hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
 
 <div id="timeDiv">
-<span>Enter time:</span>
+<span>
+Enter time:
+<br>
+(up to 72 hours)</span>
 <br>
 
 <div id="timeInputAlignmentDiv">
@@ -128,7 +138,7 @@ hour</label>
        id="hoursInputEl" 
        name="hoursInput" 
        size="3" 
-       maxlength="3" 
+       maxlength="2" 
        class="timeInputEl">
 
 <label for="hoursInput" 
@@ -207,7 +217,7 @@ minutes</label>
 
 <footer>
 <p id="bugReport">
-*[Bug report] affecting minutes / 60 result in the summary<strong>:: this line only ::</strong>when using the All Overtime button, the minutes / 60 <strong>result</strong> displays value from the previous calculation.
+[Bug report:: 06/25/22] Affecting "minutes / 60" result displayed in the summary:: this line only :: When using the All Overtime button the "minutes / 60" result displays a value from the previous calculation:: Press All Overtime button again to update this line.
 </p>
 
 2022 Tampa Bus Pay.com
