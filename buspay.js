@@ -51,11 +51,12 @@ function calculatePay() {
 
     if (time === 0) {document.getElementById("showPayEl").innerHTML = "$" + pay.toFixed(2); return;}
     else if (time <= 40) {
-        let fractionHour = minutes / 60; //alert(typeof fractionHour); 
+        fractionHour = minutes / 60;
         document.getElementById("showPayEl").innerHTML = "$" + pay.toFixed(2);
         li1.innerHTML = minutes + " minutes " + "/" + " 60 = " + fractionHour.toFixed(4) + " of an hour.";
         li2.innerHTML =  time.toFixed(4) + " hours, multiplied by $" + rate.toFixed(2) + " = $" + pay.toFixed(4);
         li1.style.display = "list-item";
+        li1.style.listStyle="disc";
         li2.style.display = "list-item";
 
         li3.style.display = "none";
@@ -67,7 +68,7 @@ function calculatePay() {
         li9.style.display = "none";
 }
     else {
-        let fractionHour = minutes / 60; //alert(typeof fractionHour); 
+        fractionHour = minutes / 60;
         overtime = time - 40;
         overtimeRate = rate * 1.5;
         straightTime = 40;
@@ -81,6 +82,7 @@ function calculatePay() {
         document.getElementById("showPayEl").innerHTML = "$" + straightPlusOvertimePay.toFixed(2); //good
 
         li1.style.display = "list-item";
+        li1.style.listStyle="disc";
         li1.innerHTML = "<b>Straight time:</b>" + " $" + straightTimePay.toFixed(2);
 
         li2.style.display = "list-item";
@@ -113,7 +115,6 @@ function allOvertime() {
     goBtn.style.backgroundColor = "rgb(242, 242, 242)";
     goBtn.style.border = "solid 2px rgb(128, 128, 128)";
 
-    let fractionHour = minutes / 60; //alert(typeof fractionHour);
     rate = document.getElementById("rateInputEl").value;
     rate = parseFloat(rate);
     if (isNaN(rate)) rate = 0;
@@ -126,13 +127,16 @@ function allOvertime() {
     time = hours + (minutes / 60);
     pay = rate * time;
 
+    fractionHour = minutes / 60; 
     overtimeRate = rate * 1.5;
     allOvertimePay = time * overtimeRate;
 
     document.getElementById("showPayEl").innerHTML = "$" + allOvertimePay.toFixed(2);
 
-    li1.innerHTML = "<b>All Overtime</b>"
+    li1.innerHTML = "<b>All Overtime</b>";
     li1.style.display = "list-item";
+    li1.style.listStyle = "none";
+
 
     li2.innerHTML = minutes + " minutes " + "/" + " 60 = " + fractionHour.toFixed(4) + " of an hour.";
     li2.style.display = "list-item";
