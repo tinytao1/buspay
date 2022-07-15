@@ -25,10 +25,13 @@ hr {
   margin-bottom: 10px;
 }
 
+#effectiveTextLabel {font-size: 18px;}
+
+
 #payRateDiv {
   font-size: ;
   padding-top: 10px;
-  padding-bottom: 17px;
+  padding-bottom: 5px;
 }
 
 .payRateBtn {
@@ -42,10 +45,12 @@ hr {
   box-sizing: border-box;
 }
 
-#effectiveTextLabel {
+#dateDropDown {font-size: 18px;}
+/* #effectiveTextLabel {
   display: inline-block;
   margin-top: 10px;
 }
+*/
 
 #timeDiv {
   text-align: center;
@@ -100,6 +105,18 @@ hr {
   font-size: 20px;
 }
 
+#subtitle {
+  font-family: helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#subtitle2 {
+  font-family: helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
 #payRateDiv {
   width: 200px;
   background-color: ; cornsilk;
@@ -133,11 +150,30 @@ ul {list-style-type: disc;} /*circle none square disc*/
 
 footer {margin-top: 700px;}
 
+
+
 #bugReport {
   font-size: 14px;
-
-
 }
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+table td:nth-child(2) { text-align: end; }
+table td:nth-child(3) { text-align: end; }
+table td:nth-child(4) { text-align: end; }
 
 
 

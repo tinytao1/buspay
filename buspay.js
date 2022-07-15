@@ -30,6 +30,12 @@ let li9 = document.getElementById("li9");
 let allOTBtn = document.getElementById("allOvertimeButton");
 let goBtn = document.getElementById("goBtn")
 
+function onloadratesInsertIntoButtons()
+{
+    ratesInsertIntoButtons(
+    18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
+}
+
 function calculatePay() {
     allOTBtn.style.backgroundColor = "rgb(242, 242, 242)";
     allOTBtn.style.border = "2px solid rgb(128, 128, 128)";
@@ -98,7 +104,7 @@ function calculatePay() {
         li5.innerHTML = 40 + " hours multiplied by $" + rate.toFixed(2) + " = $" + straightTimePay.toFixed(2);
 
         li6.style.display = "list-item";
-        li6.innerHTML = "$" + rate.toFixed(2) + " /hour straight time<br>multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
+        li6.innerHTML = "$" + rate.toFixed(2) + " /hour straight time rate<br>multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
 
         li7.style.display = "list-item";
         li7.innerHTML = overtime.toFixed(4) + " hours multiplied by $" + overtimeRate.toFixed(4) + " = $" + overtimePay.toFixed(4);
@@ -141,7 +147,7 @@ function allOvertime() {
     li2.innerHTML = minutes + " minutes " + "/" + " 60 = " + fractionHour.toFixed(4) + " of an hour.";
     li2.style.display = "list-item";
 
-    li3.innerHTML = "$" + rate.toFixed(2) + " /hour multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
+    li3.innerHTML = "$" + rate.toFixed(2) + " /hour straight time rate<br>multiplied by 1.5 = <br>$" + overtimeRate.toFixed(4) + " /hour overtime rate.";
     li3.style.display = "list-item"
 
     li4.style.display = "list-item";
@@ -174,33 +180,6 @@ function theResetButtonActions() {
     allOTBtn.style.color = "black";
     goBtn.style.backgroundColor = "rgb(140, 217, 175)";
     goBtn.style.border = "solid 2px rgb(64, 191, 121)";
-}
-
-function onloadratesInsertIntoButtons() {
-    ratesInsertIntoButtons(
-    18.87, 19.94, 21.29, 22.91, 24.80, 26.95);
-}
-
-function ratesInsertIntoButtons(
-    rate1, rate2, rate3, rate4, rate5, rate6) {
-    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
-    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
-    document.getElementById("step1Button").value = "$" + rate1.toFixed(2);
-    document.getElementById("step2Button").value = "$" + rate2.toFixed(2);
-    document.getElementById("step3Button").value = "$" + rate3.toFixed(2);
-    document.getElementById("step4Button").value = "$" + rate4.toFixed(2);
-    document.getElementById("step5Button").value = "$" + rate5.toFixed(2);
-    document.getElementById("step6Button").value = "$" + rate6.toFixed(2);
 }
 
 function selectStep1() {
@@ -323,9 +302,30 @@ function selectStep6() {
     document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";
 }
 
+document.getElementById('dateDropDown').addEventListener("change", ratesInsertIntoButtons(19.45, 20.56, 21.95, 23.62, 25.57, 27.79));
 
 
-
+function ratesInsertIntoButtons(
+    rate1, rate2, rate3, rate4, rate5, rate6) {
+    document.getElementById("step1Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step2Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step3Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step4Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step5Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step6Button").style.backgroundColor = "rgb(242, 242, 242)"; // light grey
+    document.getElementById("step1Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step2Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step3Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step4Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step5Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step6Button").style.border = "2px solid rgb(128, 128, 128)";  // grey
+    document.getElementById("step1Button").value = "$" + rate1.toFixed(2);
+    document.getElementById("step2Button").value = "$" + rate2.toFixed(2);
+    document.getElementById("step3Button").value = "$" + rate3.toFixed(2);
+    document.getElementById("step4Button").value = "$" + rate4.toFixed(2);
+    document.getElementById("step5Button").value = "$" + rate5.toFixed(2);
+    document.getElementById("step6Button").value = "$" + rate6.toFixed(2);
+}
 
 
 

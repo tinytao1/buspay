@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" />
   <title>Bus Pay Tampa</title>
-  <link rel="stylesheet" href="buspay.css" />
+  <link rel="stylesheet" href="buspay07152022.css" />
 </head>
 
 <body onload="onloadratesInsertIntoButtons()">
@@ -15,16 +15,25 @@ Tampa</span>
 Bus Pay
 <br>
 <span id="subtitle">
-Daily & weekly pay calculator</span>
+Daily & Weekly Pay Calculator</span>
+<br>
+<span id="subtitle2">
+(View contract rates at
+<a href="#contractRatesTable">
+bottom</a> of page.)
+</span>
 </h1>
 
 
 
 
 <form>
+<br>
+<!--       
 <span id="selectRateTextLabel">
 Select a pay rate:</span>
 <br>
+-->
 
 <input onclick="selectStep1()"
        id="step1Button" 
@@ -76,8 +85,22 @@ Select a pay rate:</span>
 <label for="step6"></label>
 <br>
 
+<div id="payRateDiv">
+<label id="payratetext" for="rateinput"></label>
+
+<span><b>
+$</b></span>
+
+<input type="text" id="rateInputEl" name="rateinput" size="5" maxlength="8">
+<label for="rateEl">
+<b>/</b>
+hour</label>
+</div>
+
+<!--
 <span id="effectiveTextLabel">
-Effective: October of</span>
+Contract rates change in October of<br>
+each year. Select to view changes:</span>
 <br>
 
 <input type="radio" 
@@ -110,18 +133,7 @@ Effective: October of</span>
 
 <label for="e2023">
 2023</label>
-
-<div id="payRateDiv">
-<label id="payratetext" for="rateinput"></label>
-
-<span><b>
-$</b></span>
-
-<input type="text" id="rateInputEl" name="rateinput" size="5" maxlength="8">
-<label for="rateEl">
-<b>/</b>
-hour</label>
-</div>
+-->
 
 <hr>  <!-- HORIZONTAL RULE ------------------ HORIZONTAL RULE --------------- -->
 
@@ -216,6 +228,60 @@ minutes</label>
 </ul>
 
 <footer>
+       <hr>
+
+<table id="contractRatesTable">
+<caption>Contract Rates Table</caption>
+
+  <tr>
+    <th>Months of Service</th>
+    <th>10/1/2021</th>
+    <th>10/1/2022</th>
+    <th>10/1/2023</th>
+  </tr>
+  <tr>
+    <td>0-12 Months (70%)</td>
+    <td>$18.87</td>
+    <td>$19.45</td>
+    <td>$20.03</td>
+  </tr>
+  <tr>
+    <td>13-24 Months (74%)</td>
+    <td>$19.94</td>
+    <td>$20.56</td>
+    <td>$21.18</td>
+  </tr>
+  <tr>
+    <td>25-36 Months (79%)</td>
+    <td>$21.29</td>
+    <td>$21.95</td>
+    <td>$22.61</td>
+  </tr>
+  <tr>
+    <td>37-48 Months (85%)</td>
+    <td>$22.91</td>
+    <td>$23.62</td>
+    <td>$24.33</td>
+  </tr>
+  <tr>
+    <td>49-60 Months (92%)</td>
+    <td>$24.80</td>
+    <td>$25.57</td>
+    <td>$26.33</td>
+  </tr>
+  <tr>
+    <td>61-72 Months (100%)</td>
+    <td>$26.95</td>
+    <td>$27.79</td>
+    <td>$28.62</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>3.70%</td>
+    <td>3.1%</td>
+    <td>3.0%</td>
+  </tr>
+</table>
 <p id="bugReport">
 [Resolved 07/10/2022: Bug report:: 06/25/22] 
 All Overtime button summary.
@@ -225,7 +291,7 @@ All Overtime button summary.
 
 </footer>
 
-<script type="text/javascript" src="buspay07102022.js"></script>
+<script type="text/javascript" src="buspay07152022.js"></script>
 
 </body>
 </html>
