@@ -45,6 +45,11 @@ hr {
   box-sizing: border-box;
 }
 
+#hoursUpToLabel {
+  background-color: ;
+  font-size: 26;
+}
+
 #dateDropDown {font-size: 18px;}
 /* #effectiveTextLabel {
   display: inline-block;
@@ -102,7 +107,7 @@ hr {
 #tampa {
   font-family: helvetica, sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 #subtitle {
@@ -159,10 +164,12 @@ footer {margin-top: 700px;}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(215, 245, 245);
   margin-top: 35px;
   margin-bottom: 35px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 16px;
 }
 
 td, th {

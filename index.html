@@ -3,38 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Bus Pay Tampa</title>
-  <link rel="stylesheet" href="buspay07152022.css" />
+  <title>Tampa Bus Pay</title>
+  <link rel="stylesheet" href="buspay.css" />
 </head>
 
 <body onload="onloadratesInsertIntoButtons()">
 
 <h1 id="title"><span id="tampa">
-Tampa</span>
-<br>
-Bus Pay
+Tampa Bus Pay</span>
 <br>
 <span id="subtitle">
-Daily & Weekly Pay Calculator</span>
+Weekly Pay Calculator</span>
 <br>
-<span id="subtitle2">
-(View contract rates at
+<span id="subtitle2" style="font-size: 16px;">
+(Contract rates at
 <a href="#contractRatesTable">
 bottom</a> of page.)
 </span>
 </h1>
 
-
-
-
 <form>
-<br>
-<!--       
-<span id="selectRateTextLabel">
-Select a pay rate:</span>
-<br>
--->
-
 <input onclick="selectStep1()"
        id="step1Button" 
        name="step1" 
@@ -139,8 +127,9 @@ each year. Select to view changes:</span>
 
 <div id="timeDiv">
 <span>
-Enter time:
+Enter time:</span>
 <br>
+<span id="hoursUpToLabel" style="font-size: 16px;">
 (up to 72 hours)</span>
 <br>
 
@@ -291,7 +280,7 @@ All Overtime button summary.
 
 </footer>
 
-<script type="text/javascript" src="buspay07152022.js"></script>
+<script type="text/javascript" src="buspay.js"></script>
 
 </body>
 </html>
